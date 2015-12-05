@@ -1,0 +1,36 @@
+.root {
+	-fx-background-color: #000000;
+}
+
+.split-pane {
+	-fx-background-color: #000000;
+}
+
+.split-pane-divider {
+	-fx-background-color: #303030;
+}
+
+.list-view {
+	-fx-background-color: #575757;
+}
+
+.progress-bar {
+	-fx-accent: #ffb200;
+}
+
+.list-cell:filled:selected:focused, .list-cell:filled:selected {
+    -fx-background-color: #ffb200;
+    -fx-text-fill: #000000; 
+}
+
+.list-cell { -fx-text-fill: #ffffff;  }
+
+.list-cell:odd { -fx-background-color: #575757;}
+
+.list-cell:even { -fx-background-color: #676767;}
+
+.radio-button {
+	-fx-text-fill: #ffb200;
+	-fx-padding: 0 0 3 0;
+	 -fx-focus-color: #ffb200;
+}

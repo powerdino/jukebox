@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.media.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.GridPane?>
+
+<GridPane fx:id="root" prefHeight="565.0" prefWidth="823.0" style="-fx-background-color: #000000;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.FrontendController">
+  <!-- TODO Add Nodes -->
+  <children>
+    <SplitPane dividerPositions="0.5" focusTraversable="true" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="0" GridPane.vgrow="ALWAYS">
+      <items>
+        <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
+               <children>
+                  <ListView fx:id="library" layoutX="23.0" layoutY="30.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0" />
+               </children></AnchorPane>
+        <SplitPane dividerPositions="0.14742451154529307" focusTraversable="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" orientation="VERTICAL">
+          <items>
+                  <GridPane maxHeight="70.0" maxWidth="1.7976931348623157E308" minHeight="70.0" prefHeight="70.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="NEVER" maxWidth="174.0" minWidth="10.0" prefWidth="145.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="132.0" />
+                        <ColumnConstraints fillWidth="false" hgrow="NEVER" maxWidth="137.0" minWidth="10.0" prefWidth="130.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints fillHeight="false" maxHeight="41.0" minHeight="32.0" prefHeight="41.0" vgrow="NEVER" />
+                      <RowConstraints maxHeight="25.0" minHeight="25.0" prefHeight="25.0" vgrow="NEVER" />
+                    </rowConstraints>
+                     <children>
+                        <ProgressBar fx:id="songprogress" maxWidth="1.7976931348623157E308" progress="0.0" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="NEVER">
+                           <padding>
+                              <Insets left="5.0" right="5.0" />
+                           </padding>
+                           <effect>
+                              <Reflection />
+                           </effect>
+                        </ProgressBar>
+                        <Label text="Now playing:" textFill="#ffb200" GridPane.rowIndex="1">
+                           <padding>
+                              <Insets left="5.0" right="5.0" />
+                           </padding>
+                           <font>
+                              <Font name="Electronic Highway Sign" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="labelRemainingTime" text="- 00:00:00" textFill="#ffb200" GridPane.columnIndex="2">
+                           <font>
+                              <Font name="Electronic Highway Sign" size="18.0" />
+                           </font></Label>
+                        <Label fx:id="labelNowPlaying" textFill="#ffb200" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="Electronic Highway Sign" size="18.0" />
+                           </font></Label>
+                        <Label fx:id="labelCredits" text="Credits: 0" textFill="#ffb200" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="Electronic Highway Sign" size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </GridPane>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                     <children>
+                        <ListView fx:id="playlist" layoutX="58.0" layoutY="62.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0" />
+                     </children></AnchorPane>
+          </items>
+        </SplitPane>
+      </items>
+    </SplitPane>
+      <VBox fx:id="categoriesContainer" prefHeight="200.0" prefWidth="100.0">
+         <GridPane.margin>
+            <Insets />
+         </GridPane.margin>
+      </VBox>
+  </children>
+  <columnConstraints>
+      <ColumnConstraints fillWidth="false" hgrow="NEVER" maxWidth="55.0" minWidth="10.0" prefWidth="55.0" />
+    <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="758.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+</GridPane>
