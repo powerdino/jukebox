@@ -51,7 +51,7 @@ public class FrontendController {
 	private ObservableList<Song> o_playlist;
 	private LinkedList<Song> l_playlist;
 	
-	public final static String LIBRARY_FOLDER = "F:\\Eigene Dateien\\workspace\\MyJukebox\\songs"; 
+	public final static String LIBRARY_FOLDER = "songs"; 
 	
 	public void initialize(){
 		
