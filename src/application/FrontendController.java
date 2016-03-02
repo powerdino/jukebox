@@ -27,7 +27,6 @@ import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
-import javafx.scene.media.MediaPlayer;
 import logic.Jukebox;
 import logic.Song;
 
@@ -43,7 +42,6 @@ public class FrontendController {
 	@FXML private VBox categoriesContainer;
 	private ToggleGroup tg;
 	
-	private MediaPlayer mediaplayer;
 	private int credits = 0;
 	
 	private LinkedList<Song> l_library;	
@@ -145,7 +143,7 @@ public class FrontendController {
 			}
 		});
 		
-		this.o_playlist.addListener(new Jukebox(mediaplayer, o_playlist, songprogress, labelRemainingTime, labelNowPlaying));
+		this.o_playlist.addListener(new Jukebox(o_playlist, songprogress, labelRemainingTime, labelNowPlaying));
 	}
 	
 	private void incCredit(){

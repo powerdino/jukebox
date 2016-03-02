@@ -21,7 +21,7 @@ public class Song {
 		} catch (Exception  e) {
 			this.mp3file = null;
 			System.out.println("Error handling MP3-file or Tags.");
-			e.printStackTrace();
+			//e.printStackTrace();
 		}
 		if((artist != null) && (title != null) && (artist != "") && (title != "")){
 			name = artist + " - " + title;
